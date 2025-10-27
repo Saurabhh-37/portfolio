@@ -153,6 +153,8 @@ export default function Portfolio() {
   const experience = [
     {
       title: "WTE Infra Projects Pvt. Ltd., Pune — Jr. Engineer (Dec 2024 – Present)",
+      company: "WTE Infra Projects",
+      logo: "/logos/wte-logo.png",
       summary:
         "Building scalable IoT systems for real-world infrastructure. I lead the design and deployment of an Online Monitoring System (OMS) powering 100+ water and wastewater treatment plants, bridging cloud, IoT, and real-time analytics.",
       highlights: [
@@ -166,6 +168,8 @@ export default function Portfolio() {
     },
     {
       title: "3DExperience Lab — Dassault Systèmes, Pune — 3DExperience Lab Intern (Dec 2023 – Dec 2024)",
+      company: "Dassault Systèmes",
+      logo: "/logos/dassault-logo.png",
       summary:
         "Worked across IoT, robotics, and AI research projects — blending real-time data systems with human-like intelligence.",
       highlights: [
@@ -178,6 +182,8 @@ export default function Portfolio() {
     },
     {
       title: "Go-Green's Technologies Pvt. Ltd., Mumbai — R&D Intern (Jan 2023 – Dec 2023)",
+      company: "Go-Green's Technologies",
+      logo: "/logos/gogreen-logo.png",
       summary:
         "Worked on educational IoT tools and community outreach to promote accessible technology learning.",
       highlights: [
@@ -388,6 +394,11 @@ export default function Portfolio() {
         {/* --- Right Column: Image with Enhanced Data Flow Animation --- */}
         <div className="relative z-10 mt-8 sm:mt-10 md:mt-0 md:w-1/2 flex justify-center md:justify-end">
           <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-xl border border-[var(--accent)] group">
+          <img 
+                  src="/profile.JPG" 
+                  alt="Saurabh Hagawane - Software Engineer & Technical Architect"
+                  className="w-full h-full object-cover"
+                />
             {/* Professional Portrait Placeholder */}
             <div className="w-full h-full bg-gradient-to-br from-[var(--accent)]/20 to-[var(--highlight)]/20 flex items-center justify-center relative">
               <span className="text-6xl sm:text-7xl md:text-8xl font-bold text-[var(--foreground)] opacity-50">SH</span>
@@ -641,21 +652,43 @@ export default function Portfolio() {
               </p>
             </div>
 
-            <div className="space-y-8">
-              {experience.map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-[var(--card-bg)] rounded-xl p-8 border border-[var(--border)] hover:border-[var(--accent)]/40 transition-all"
-                >
-                  <div className="space-y-6">
-                    <div>
-                      <h3 className="text-2xl font-bold text-[var(--foreground)] mb-3">{item.title}</h3>
-                      <p className="text-lg text-[var(--secondary)] leading-relaxed">{item.summary}</p>
-                    </div>
+              <div className="space-y-8">
+                {experience.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-[var(--card-bg)] rounded-xl p-8 border border-[var(--border)] hover:border-[var(--accent)]/40 transition-all"
+                  >
+                    <div className="space-y-6">
+                      <div className="flex items-start gap-4">
+                        {/* Company Logo */}
+                        <div className="w-16 h-16 rounded-lg overflow-hidden bg-[var(--background)] border border-[var(--border)] flex items-center justify-center flex-shrink-0">
+                          <img 
+                            src={item.logo} 
+                            alt={`${item.company} logo`}
+                            className="w-12 h-12 object-contain"
+                            onError={(e) => {
+                              // Fallback to company initials if logo fails to load
+                              e.currentTarget.style.display = 'none';
+                              const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+                              if (fallback) {
+                                fallback.style.display = 'flex';
+                              }
+                            }}
+                          />
+                          <div className="w-12 h-12 bg-[var(--accent)]/10 rounded-full flex items-center justify-center text-[var(--accent)] font-bold text-lg hidden">
+                            {item.company.split(' ').map(word => word[0]).join('').slice(0, 2)}
+                          </div>
+                        </div>
+                        
+                        <div className="flex-1">
+                          <h3 className="text-2xl font-bold text-[var(--foreground)] mb-3">{item.title}</h3>
+                          <p className="text-lg text-[var(--secondary)] leading-relaxed">{item.summary}</p>
+                        </div>
+                      </div>
                     
                     <div>
                       <h4 className="text-lg font-semibold text-[var(--foreground)] mb-3">Key Highlights</h4>
