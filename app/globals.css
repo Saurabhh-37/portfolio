@@ -9,6 +9,11 @@
   --highlight: #22D3EE;
   --card-bg: #FFFFFF;
   --border: #E5E7EB;
+  /* subtle section tints */
+  --tint-green: rgba(74, 222, 128, 0.06);
+  --tint-cyan: rgba(34, 211, 238, 0.06);
+  --tint-amber: rgba(245, 158, 11, 0.06);
+  --tint-indigo: rgba(99, 102, 241, 0.06);
 }
 
 @theme inline {
@@ -32,6 +37,10 @@
     --highlight: #22D3EE;
     --card-bg: #111111;
     --border: #374151;
+    --tint-green: rgba(74, 222, 128, 0.08);
+    --tint-cyan: rgba(34, 211, 238, 0.08);
+    --tint-amber: rgba(245, 158, 11, 0.08);
+    --tint-indigo: rgba(99, 102, 241, 0.08);
   }
 }
 
@@ -113,4 +122,32 @@ html {
 .animate-gradient-slow {
   background-size: 200% 200%;
   animation: gradientSlow 15s ease-in-out infinite;
+}
+
+/* Thematic section helpers to break monotony */
+.section-tint-green {
+  background: linear-gradient(180deg, var(--tint-green), transparent 60%);
+}
+
+.section-tint-cyan {
+  background: linear-gradient(180deg, var(--tint-cyan), transparent 60%);
+}
+
+.section-tint-amber {
+  background: linear-gradient(180deg, var(--tint-amber), transparent 60%);
+}
+
+.section-tint-indigo {
+  background: linear-gradient(180deg, var(--tint-indigo), transparent 60%);
+}
+
+.section-surface-alt {
+  background:
+    radial-gradient(1200px 200px at 50% -50px, var(--tint-cyan), transparent),
+    var(--background);
+}
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
 }
