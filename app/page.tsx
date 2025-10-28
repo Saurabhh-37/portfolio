@@ -34,76 +34,116 @@ export default function Portfolio() {
     { id: 'work', label: 'Work' },
     { id: 'experience', label: 'Experience' },
     { id: 'projects', label: 'Projects' },
+    { id: 'blogs', label: 'Blogs' },
     { id: 'publications', label: 'Publications' },
     { id: 'contact', label: 'Contact' }
   ];
 
   const projects = [
     {
-      title: 'Fleet Management System',
-      tagline: 'Real-time IoT & Cloud Infrastructure for Logistics Operations',
-      description: 'Designed and implemented a distributed IoT platform ingesting over 10M+ telemetry data points daily. Built a cloud-native microservices architecture enabling real-time fleet tracking, route optimization, and predictive maintenance using ML pipelines. Optimized message throughput with Redis streams and MQTT brokers, ensuring sub-second synchronization between devices and dashboards.',
-      stack: ['React', 'Node.js', 'PostgreSQL', 'Redis', 'IoT Sensors', 'GCP Pub/Sub'],
-      image: '/api/placeholder/400/300',
+      title: 'bldspace',
+      tagline: 'A space for builders to build together',
+      description: 'bldspace is a community platform where people share what they are building, find collaborators, and grow ideas into real projects. Each post focuses on the work itself, not followers or likes. Builders connect through contribution requests, discussions, and shared progress. It’s a clean, distraction-free space built around creativity, openness, and meaningful collaboration.',
+      stack: ['Next.js', 'React', 'Firebase', 'TypeScript', 'Tailwind CSS'],
+      image: '/projects/bldspace.png',
+      logo: '/projects/logo/bldspace.png',
       github: '#',
-      live: '#',
-      metrics: 'Top 5 Finalist — LogiHackathon (Dassault Systèmes)',
-      icon: '🏆'
+      live: 'https://bldspace.vercel.app/',
+      metrics: 'Facilitated 200+ collaboration requests across 100+ early projects',
+      icon: '🚀'
     },
     {
-      title: 'ManageME Analytics Platform',
-      tagline: 'No-Code Data Analytics Platform for MSMEs',
-      description: 'Architected a serverless analytics engine processing 100K+ structured files with automated ETL pipelines. Built a dynamic dashboard rendering engine capable of real-time query visualization using Firebase Functions and BigQuery. Focused on low-latency data retrieval, multi-tenant isolation, and 99.9% uptime for enterprise users.',
-      stack: ['React', 'Firebase', 'Cloud Functions', 'BigQuery', 'Chart.js'],
-      image: '/api/placeholder/400/300',
+      title: 'ROMA',
+      tagline: 'Collaborative Travel Planning Platform',
+      description: 'ROMA is a travel planning platform that lets people plan trips together in real time. It brings shared maps, live route visualization, and seamless coordination into one place. The system is built on a scalable cloud setup with geospatial mapping, live data sync, and contextual trip management for a smooth and intuitive planning experience.',
+      stack: ['Next.js', 'React', 'Firebase', 'Google Maps Platform', 'GCP Functions', 'WebSockets'],
+      image: '/projects/roma.png',
       github: '#',
-      live: '#',
-      metrics: 'Adopted by 500+ MSMEs | Enabled non-technical teams to derive insights without code',
-      icon: '📊'
+      live: 'https://roma-nu.vercel.app/',
+      metrics: '3× increase in collaboration | 40% faster trip planning | Multi-region cloud deployment',
+      icon: '🌍'
     },
     {
-      title: 'GeetAI Conversational Engine',
-      tagline: 'Context-Aware Conversational AI for Spiritual Dialogue',
-      description: 'Developed a context-preserving conversational AI using Gemma 2, optimized for domain-specific semantic understanding. Engineered an embedding-based retrieval system with Pinecone vector search, enabling natural multi-turn dialogues and long-context memory. Deployed on serverless GCP infrastructure with low latency and scalable concurrency.',
+      title: 'WorldVibe',
+      tagline: 'The Living Social Map',
+      description: 'A global platform where people drop short-lived “vibes” (thoughts, photos, or videos) pinned to real locations on an interactive world map. Each vibe lives for 24 hours before fading, creating a constantly evolving view of human emotion and presence across the planet. WorldVibe captures what the world is feeling right now.',
+      stack: ['Next.js', 'Google Maps API', 'Firebase', 'Cloud Storage', 'TailwindCSS'],
+      image: '/projects/worldvibe.png',
+      github: '#',
+      live: 'https://worldvibe.vercel.app/',
+      metrics: 'Connected users from 30+ countries within the first launch phase',
+      icon: '🌍'
+    },
+    {
+      title: 'KriSync',
+      tagline: 'Unify, Visualize, and Sync Your Work',
+      description: 'KriSync is a unified workspace for developers, freelancers, and small teams to connect all their project data across tools into one interactive canvas. It helps you create project summaries, add integrations, visualize workflows using React Flow, keep notes, set milestones, and track progress all in one place. Designed for those managing multiple projects across platforms, KriSync transforms scattered links and data into a clear, visual narrative of your work.',
+      stack: ['React', 'Firebase', 'React Flow', 'Node.js', 'Google Cloud Platform'],
+      image: '/projects/krisync.png',
+      logo: '/projects/logo/krisync.jpg',
+      github: '#',
+      live: 'https://www.krisync.com/',
+      metrics: 'Simplified multi-platform project tracking for 50+ early users during private beta',
+      icon: '🔗'
+    },
+    {
+      title: 'GeetAI',
+      tagline: 'Conversational Platform for Spiritual Dialogue',
+      description: 'Created an interactive platform that brings the wisdom of the Bhagavad Gita into everyday conversations. GeetAI personifies Lord Krishna, offering calm, contextual, and spiritually grounded guidance through natural dialogue. Powered by Gemma 2 and Pinecone, it understands user intent, recalls context, and delivers meaningful multi-turn discussions rooted in timeless teachings.',
       stack: ['Gemma 2', 'GCP', 'Pinecone', 'TensorFlow', 'FastAPI'],
-      image: '/api/placeholder/400/300',
-      github: '#',
-      live: '#',
-      metrics: 'Achieved 95% semantic accuracy across 1M+ conversations',
+      image: '/projects/geetai.png',
+      logo: '/projects/logo/GeetAI_logo.jpeg',
+      github: 'https://github.com/Saurabhh-37/geeta_chatbot',
+      live: 'https://geetai.vercel.app/',
+      metrics: 'Supports over 1M contextual message exchanges with high semantic precision',
       icon: '🕊️'
     },
     {
-      title: 'KriSync Integration Platform',
-      tagline: 'Unified SaaS Data Orchestration Layer',
-      description: 'Architected an interoperability platform integrating 50+ SaaS applications under a microservices ecosystem. Built a unified data synchronization engine with real-time delta updates and conflict resolution algorithms. Integrated OAuth 2.0 and API Gateway for secure access control. Emphasized modular scalability and inter-service communication using Pub/Sub and gRPC.',
-      stack: ['GCP', 'Firestore', 'Pinecone', 'Microservices', 'OAuth 2.0'],
-      image: '/api/placeholder/400/300',
+      title: 'Construx',
+      tagline: 'Construction Workflow Management System',
+      description: 'Developed a mobile-first platform that streamlines project coordination, progress tracking, and field data management for construction teams. Construx connects labor, activities, and expenses in real time, ensuring accurate updates and transparent communication across teams. Built with React Native and Firebase, it enables seamless collaboration, reporting, and on-site decision-making from any device.',
+      stack: ['React Native', 'Firebase', 'Firestore', 'WebRTC'],
+      image: '/projects/construx.png',
+      logo: '/projects/logo/construx.png',
       github: '#',
-      live: '#',
-      metrics: 'Scaled to handle 10K+ API calls/min across multiple tenant environments',
-      icon: '🌐'
-    },
-    {
-      title: 'Construx Project Management Suite',
-      tagline: 'AI-Driven Construction Workflow System',
-      description: 'Engineered a mobile-first construction management platform supporting real-time project collaboration, AI-driven insights, and automated reporting. Integrated Firestore for synchronized updates, TensorFlow models for predictive resource optimization, and WebRTC for live communication.',
-      stack: ['React Native', 'Firebase', 'TensorFlow', 'WebRTC'],
-      image: '/api/placeholder/400/300',
-      github: '#',
-      live: '#',
-      metrics: 'Improved operational efficiency by 30% across 100+ active construction projects',
+      live: 'https://construx-website.vercel.app/',
+      metrics: 'Boosted operational efficiency by 30% across 100+ active construction projects',
       icon: '🧱'
     },
     {
-      title: 'ROMA Travel Intelligence Platform',
-      tagline: 'AI-Powered Personalized Travel Planning',
-      description: 'Developed an AI-driven recommendation engine leveraging machine learning and dynamic pricing algorithms for personalized trip planning. Built map-based visual interactions using Mapbox, enabling interactive route planning and real-time data insights. Focused on high performance and modular architecture for scalability.',
-      stack: ['React', 'Mapbox', 'Firebase', 'ML APIs', 'GraphQL'],
-      image: '/api/placeholder/400/300',
+      title: 'CollektEase',
+      tagline: 'WhatsApp-Based Billing and Collection Platform',
+      description: 'Designed a smart billing system that helps newspaper distributors and local vendors manage monthly collections with ease. CollektEase automates invoice generation and payment reminders through WhatsApp, allows customers to share payment proofs, and simplifies manual verification. Built to handle multi-tenant setups, it offers transparency, faster reconciliation, and effortless cash flow tracking for small businesses.',
+      stack: ['React', 'Firebase', 'Cloud Functions', 'Twilio WhatsApp API'],
+      image: '/projects/collektease.png',
+      logo: '/projects/logo/collektease.png',
       github: '#',
       live: '#',
-      metrics: '1000+ personalized trips generated | 40% cost optimization achieved',
-      icon: '🌍'
+      metrics: 'Reduced payment delays by 40% and improved collection accuracy across 500+ monthly users',
+      icon: '📊'
+    },
+    {
+      title: 'ManageME',
+      tagline: 'No-Code Business Analytics Platform',
+      description: 'Built a platform that transforms Excel and CSV files into interactive dashboards and insights without writing a single line of code. ManageME helps MSMEs analyze sales, revenue, and performance data through intuitive visualizations, filtering, and reporting. Designed with real-time Firestore syncing and Cloud Functions for automated data processing, it brings enterprise-grade analytics to everyday business users.',
+      stack: ['React', 'Firebase', 'Cloud Functions', 'Firestore'],
+      image: '/projects/manageme.png',
+      logo: '/projects/logo/manageme.png',
+      github: '#',
+      live: 'https://www.manageme.tech/',
+      metrics: 'Adopted by 50+ MSMEs, streamlining reporting workflows and cutting manual analysis time by 60%',
+      icon: '📈'
+    },
+    {
+      title: 'Imagic',
+      tagline: 'AI-Powered Image Generation & Editing Suite',
+      description: 'Developed an advanced AI image generation platform with real-time editing capabilities. Integrated state-of-the-art machine learning models for image synthesis, style transfer, and intelligent photo enhancement.',
+      stack: ['React', 'Python', 'TensorFlow', 'OpenCV', 'AWS S3'],
+      image: '/projects/imagic.jpg',
+      github: '#',
+      live: '#',
+      metrics: 'Generated 100K+ AI images with 98% user satisfaction',
+      icon: '🎨'
     }
   ];
 
@@ -197,36 +237,78 @@ export default function Portfolio() {
 
   const publications = [
     {
-      title: 'Building Scalable AI Systems: A Microservices Approach',
-      type: 'Technical Blog',
-      date: '2024',
-      description: 'Comprehensive guide on architecting AI systems using microservices, covering data pipelines, model serving, and real-time inference at scale.',
-      link: 'https://medium.com/@saurabh/scalable-ai-systems',
-      tags: ['AI Architecture', 'Microservices', 'Scalability']
-    },
-    {
-      title: 'IoT Data Processing at Scale: Lessons from 10M+ Daily Events',
-      type: 'Case Study',
-      date: '2024',
-      description: 'Detailed analysis of building distributed IoT platforms, covering message queuing, data processing pipelines, and real-time analytics.',
-      link: 'https://dev.to/saurabh/iot-data-processing',
-      tags: ['IoT', 'Data Processing', 'Real-time Analytics']
-    },
-    {
-      title: 'The Future of Conversational AI: Beyond Chatbots',
+      title: 'IoT Enabled Remote Monitoring Application For Telecom SMPS',
       type: 'Research Paper',
       date: '2024',
-      description: 'Exploring advanced conversational AI architectures, multi-agent systems, and context-aware dialogue management for enterprise applications.',
-      link: 'https://arxiv.org/abs/2024.xxxxx',
-      tags: ['Conversational AI', 'Multi-agent Systems', 'NLP']
+      description: 'Published research on developing an IoT-based remote monitoring system for Telecom Switch Mode Power Supply (SMPS) units. The paper presents a comprehensive solution for real-time monitoring, fault detection, and predictive maintenance of critical power infrastructure in telecommunications.',
+      link: 'https://www.ijfmr.com/research-paper.php?id=26566',
+      tags: ['IoT', 'Telecom', 'Power Systems', 'Remote Monitoring']
+    }
+  ];
+
+  const blogs = [
+    {
+      title: 'Trust is Sacred: The One Rule That Should Change How You Build Your Product',
+      type: 'Medium Blog',
+      date: '2025',
+      description:
+        'A reflection on designing with respect for people\'s time. When someone opens an app or signs up for a service, they\'re making a choice to hand over their time and attention. This means they\'re trusting you with a slice of their life they\'ll never get back. The single responsibility is to make it worth it.',
+      link: 'https://medium.com/@saurabhhagawane/trust-is-sacred-the-one-rule-that-should-change-how-you-build-your-product-d4b78cb2978e', // Add your Medium link here
+      tags: ['Product Design', 'Ethics', 'User Experience', 'Trust']
     },
     {
-      title: 'Cloud-Native Architecture Patterns for Startups',
-      type: 'Technical Blog',
-      date: '2023',
-      description: 'Practical guide for startups on implementing cloud-native architectures, covering cost optimization, scalability, and operational excellence.',
-      link: 'https://medium.com/@saurabh/cloud-native-startups',
-      tags: ['Cloud Architecture', 'Startups', 'Cost Optimization']
+      title: 'The Algorithm Problem: Visibility, Bias, and the Struggle for New Creators',
+      type: 'Medium Blog',
+      date: '2025',
+      description:
+        'Why engagement-optimized feeds privilege identity over ideas, bury emerging voices, and create invisible bias—plus thoughts on designing systems that balance scale with fairness and persistence.',
+      link: 'https://medium.com/@saurabhhagawane/the-algorithm-problem-visibility-bias-and-the-struggle-for-new-creators-469496c01d58', // Add your Medium link here
+      tags: ['Algorithms', 'Discovery', 'Bias', 'Creators']
+    },
+    {
+      title: 'Beyond Screens: Why Generative UI is the Future of Digital Experience',
+      type: 'Medium Blog',
+      date: '2025',
+      description:
+        'An argument for Generative UI: interfaces synthesized on-demand that adapt to intent, context, and cognition—shifting designers into system thinkers and raising urgent questions about transparency, agency, and ethics.',
+      link: 'https://medium.com/@saurabhhagawane/beyond-screens-why-generative-ui-is-the-future-of-digital-experience-182bf200025b', // Add your Medium link here
+      tags: ['Generative UI', 'HCI', 'LLMs', 'Product']
+    },
+    {
+      title: 'Beyond To-Do Lists: Master Your Projects with KriSync’s Visual Workspace',
+      type: 'Medium Blog',
+      date: '2025',
+      description:
+        'Why projects fail from fragmentation, and how KriSync\'s visual canvas unifies links, notes, tasks, files, and collaborators into one real-time workspace for freelancers, indie hackers, and small teams.',
+      link: 'https://medium.com/@saurabhhagawane/beyond-to-do-lists-master-your-projects-with-krisyncs-visual-workspace-7c863eb6621f', // Add your Medium link here
+      tags: ['KriSync', 'Project Management', 'Visual Workspace', 'Productivity']
+    },
+    {
+      title: 'The Code is Not Enough: Build Systems, Not Just Software',
+      type: 'Medium Blog',
+      date: '2025',
+      description:
+        'Why great products require system design—thinking in interdependencies, feedback loops, composability, observability, and long-term behavior—not just shipping features and writing code.',
+      link: 'https://medium.com/@saurabhhagawane/the-code-is-not-enough-build-systems-not-just-software-55783fd5e9dd', // Add your Medium link here
+      tags: ['Systems Thinking', 'Architecture', 'Engineering', 'Scale']
+    },
+    {
+      title: 'The One-Sentence Rule: Why Simplicity Transforms Your Projects',
+      type: 'Medium Blog',
+      date: '2025',
+      description:
+        'How forcing a one-sentence product definition drives clarity, scope discipline, and better execution—using KriSync\'s evolution from chaos to a crystal-clear visual project workspace as the case study.',
+      link: 'https://medium.com/@saurabhhagawane/the-one-sentence-rule-why-simplicity-transforms-your-projects-d9ac3bf7fa80', // Add your Medium link here
+      tags: ['Simplicity', 'Product Focus', 'Clarity', 'Execution']
+    },
+    {
+      title: 'Why Project Management Tools Still Fail Us in 2025: The Unspoken Truth',
+      type: 'Medium Blog',
+      date: '2025',
+      description:
+        'A critique of modern PM tools: scattered work, no holistic view, weak context capture, painful onboarding, over/under-powered tooling, and rigid models that ignore creative, fluid workflows—plus a call for unified, visual, evolving workspaces.',
+      link: 'https://medium.com/@saurabhhagawane/why-project-management-tools-still-fail-us-in-2025-the-unspoken-truth-48b05bdc61d2', // Add your Medium link here
+      tags: ['Project Management', 'Tools', 'Productivity', 'UX']
     }
   ];
 
@@ -582,6 +664,76 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* Blogs Section */}
+      <section className="py-24 bg-[var(--background)]">
+        <div className="max-w-[1100px] mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="space-y-16"
+          >
+            <div className="text-center space-y-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-[var(--foreground)]">
+                Blogs
+              </h2>
+              <p className="text-xl text-[var(--secondary)] max-w-2xl mx-auto">
+                Thought pieces on product, systems, and the craft of building.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {blogs.map((post, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-[var(--card-bg)] rounded-xl p-6 border border-[var(--border)] hover:border-[var(--accent)]/40 transition-all group"
+                >
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-bold text-[var(--foreground)] group-hover:text-[var(--accent)] transition-colors">
+                      {post.title}
+                    </h3>
+                    <div className="flex items-center gap-3">
+                      <span className="px-2 py-1 bg-[var(--accent)]/10 text-[var(--accent)] rounded-full text-sm font-medium">
+                        {post.type}
+                      </span>
+                      <span className="text-[var(--secondary)] text-sm">{post.date}</span>
+                    </div>
+                    <p className="text-[var(--secondary)] leading-relaxed text-sm">
+                      {post.description}
+                    </p>
+                    {post.tags && (
+                      <div className="flex flex-wrap gap-2">
+                        {post.tags.map((tag, tagIndex) => (
+                          <span key={tagIndex} className="px-2 py-1 bg-[var(--background)] text-[var(--secondary)] rounded text-xs border border-[var(--border)]">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                    <div className="pt-2">
+                      <a
+                        href={post.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-[var(--accent)] hover:text-[var(--accent)]/80 font-medium transition-colors"
+                      >
+                        Read on Medium
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section id="about" className="py-20 px-6 md:px-16 max-w-4xl mx-auto text-[var(--foreground)]">
         <h2 className="text-3xl md:text-4xl font-bold mb-8">About</h2>
@@ -746,18 +898,39 @@ export default function Portfolio() {
                   className="group bg-[var(--card-bg)] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-[var(--border)]"
                 >
                   {/* Project Image */}
-                  <div className="h-48 bg-gradient-to-br from-[var(--accent)]/20 to-[var(--highlight)]/20 relative overflow-hidden">
+                  <div className="h-48 relative overflow-hidden">
+                    <img 
+                      src={project.image} 
+                      alt={`${project.title} project screenshot`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-6xl opacity-50">
+                  <div className="absolute top-4 right-4">
+                    {project.logo ? (
+                      <img
+                        src={project.logo}
+                        alt={`${project.title} logo`}
+                        className="w-8 h-8 object-contain bg-black/30 rounded-md p-1 backdrop-blur-sm border border-white/10"
+                      />
+                    ) : (
+                      <div className="text-2xl opacity-80 bg-black/20 rounded-full p-2 backdrop-blur-sm">
                         {project.icon}
                       </div>
-                    </div>
+                    )}
+                  </div>
                   </div>
                   
                   <div className="p-6 space-y-4">
                     <div className="flex items-center gap-3 mb-3">
-                      <div className="text-3xl">{project.icon}</div>
+                      {project.logo ? (
+                        <img
+                          src={project.logo}
+                          alt={`${project.title} logo`}
+                          className="w-8 h-8 object-contain border border-[var(--border)] rounded-md p-1 bg-[var(--background)]"
+                        />
+                      ) : (
+                        <div className="text-3xl">{project.icon}</div>
+                      )}
                       <div>
                         <h3 className="text-xl font-bold text-[var(--foreground)]">{project.title}</h3>
                         <p className="text-[var(--accent)] font-medium text-sm">{project.tagline}</p>
@@ -766,11 +939,11 @@ export default function Portfolio() {
                     
                     <p className="text-[var(--secondary)] text-sm leading-relaxed">{project.description}</p>
                     
-                    <div className="bg-[var(--accent)]/10 p-3 rounded-lg border-l-4 border-[var(--accent)]">
+                    {/* <div className="bg-[var(--accent)]/10 p-3 rounded-lg border-l-4 border-[var(--accent)]">
                       <p className="text-sm font-semibold text-[var(--foreground)]">
                         <span className="text-[var(--accent)]">Outcome:</span> {project.metrics}
                       </p>
-                    </div>
+                    </div> */}
                     
                     <div className="flex flex-wrap gap-2">
                       {project.stack.map((tech) => (
@@ -780,10 +953,24 @@ export default function Portfolio() {
                       ))}
                     </div>
                     
-                    <div className="pt-2">
-                      <a href={project.live} className="inline-flex items-center gap-2 text-[var(--accent)] hover:text-[var(--accent)]/80 font-medium transition-colors text-sm">
-                        Read Case Study
+                    <div className="pt-2 flex gap-3">
+                      {/* <a 
+                        href={project.github} 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-[var(--secondary)] hover:text-[var(--accent)] font-medium transition-colors text-sm border border-[var(--border)] px-3 py-1.5 rounded-md hover:border-[var(--accent)]/40"
+                      >
+                        <Github className="w-4 h-4" />
+                        Code
+                      </a> */}
+                      <a 
+                        href={project.live} 
+            target="_blank"
+            rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-[var(--accent)] hover:text-[var(--accent)]/80 font-medium transition-colors text-sm border border-[var(--accent)] px-3 py-1.5 rounded-md hover:bg-[var(--accent)]/10"
+                      >
                         <ExternalLink className="w-4 h-4" />
+                        Live Demo
                       </a>
                     </div>
                   </div>
@@ -868,6 +1055,82 @@ export default function Portfolio() {
                   "Engineering isn't just about efficiency — it's about empathy built into systems."
                 </blockquote>
               </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Blogs Section */}
+      <section id="blogs" className="py-24 bg-[var(--background)]">
+        <div className="max-w-[1100px] mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="space-y-16"
+          >
+            <div className="text-center space-y-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-[var(--foreground)]">
+                Blogs
+              </h2>
+              <p className="text-xl text-[var(--secondary)] max-w-2xl mx-auto">
+                Thought pieces on product, systems, and the craft of building.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {blogs.map((post, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-[var(--card-bg)] rounded-xl p-6 border border-[var(--border)] hover:border-[var(--accent)]/40 transition-all group"
+                >
+                  <div className="space-y-4">
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-[var(--foreground)] mb-2 group-hover:text-[var(--accent)] transition-colors">
+                          {post.title}
+                        </h3>
+                        <div className="flex items-center gap-3 mb-3">
+                          <span className="px-2 py-1 bg-[var(--accent)]/10 text-[var(--accent)] rounded-full text-sm font-medium">
+                            {post.type}
+                          </span>
+                          <span className="text-[var(--secondary)] text-sm">{post.date}</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <p className="text-[var(--secondary)] leading-relaxed">{post.description}</p>
+                    
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {post.tags.map((tag, tagIndex) => (
+                        <span
+                          key={tagIndex}
+                          className="px-2 py-1 bg-[var(--background)] text-[var(--secondary)] rounded text-xs border border-[var(--border)]"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    
+                    <a
+                      href={post.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-[var(--accent)] hover:text-[var(--accent)]/80 font-medium transition-colors"
+                    >
+                      Read More
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
         </div>
