@@ -1382,8 +1382,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Achievements Section */}
-      {/* Achievements Section */}
+      {/* Achievements Section (commented out by request)
 <section className="py-24 bg-[var(--card-bg)] section-tint-amber">
   <div className="max-w-[1100px] mx-auto px-6">
     <motion.div
@@ -1473,6 +1472,7 @@ export default function Portfolio() {
     </motion.div>
   </div>
 </section>
+      */}
 
       {/* Vision & Future Section */}
 <section className="py-24 bg-[var(--background)] section-tint-cyan">
