@@ -121,7 +121,7 @@ export default function Portfolio() {
       logo: '/projects/logo/collektease.png',
       github: '#',
       live: '#',
-      metrics: 'Reduced payment delays by 40% and improved collection accuracy across 500+ monthly users',
+      metrics: 'Reduced payment delays by 40% and improved collection accuracy across 100+ monthly users',
       icon: '📊'
     },
     {
@@ -259,7 +259,7 @@ export default function Portfolio() {
         "Conducted workshops across Maharashtra on IoT fundamentals and practical applications."
       ],
       impact:
-        "Trained 500+ students and educators, fostering early adoption of IoT in education."
+        "Trained 200+ students and educators, fostering early adoption of IoT in education."
     }
   ];
 
