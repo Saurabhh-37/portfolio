@@ -1095,7 +1095,7 @@ export default function Portfolio() {
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3 sm:gap-4">
               {techStack.map((tech, index) => (
                 <motion.div
                   key={tech.name}
@@ -1104,7 +1104,7 @@ export default function Portfolio() {
                   transition={{ duration: 0.5, delay: index * 0.05 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.05, y: -2 }}
-                  className="group p-4 bg-[var(--background)] rounded-lg border border-[var(--border)] hover:border-[var(--accent)]/40 transition-all duration-300 cursor-pointer"
+                  className="group p-2 sm:p-4 bg-[var(--background)] rounded-lg border border-[var(--border)] hover:border-[var(--accent)]/40 transition-all duration-300 cursor-pointer"
                 >
                   <div className="text-center space-y-2">
                     <div className="group-hover:scale-110 transition-transform duration-300 flex items-center justify-center h-8">
@@ -1125,7 +1125,7 @@ export default function Portfolio() {
                       )}
                       <span className="text-xs font-semibold hidden">{tech.name}</span>
                     </div>
-                    <p className="text-sm font-medium text-[var(--foreground)] group-hover:text-[var(--accent)] transition-colors text-center leading-tight">
+                    <p className="text-xs sm:text-sm font-medium text-[var(--foreground)] group-hover:text-[var(--accent)] transition-colors text-center leading-tight">
                       {tech.name}
                     </p>
                   </div>
