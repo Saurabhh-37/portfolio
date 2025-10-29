@@ -419,7 +419,7 @@ export default function Portfolio() {
               animate={{ opacity: 1, x: 0 }}
               className="text-xl font-bold text-[var(--foreground)]"
             >
-              Saurabh
+              Saurabh Hagawane
             </motion.div>
             
             {/* Desktop Navigation */}
