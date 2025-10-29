@@ -1538,6 +1538,7 @@ export default function Portfolio() {
                 <Mail className="w-5 h-5" />
                 Email
               </motion.a>
+              {/*
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -1545,6 +1546,7 @@ export default function Portfolio() {
               >
                 Download Technical Resume
               </motion.button>
+              */}
             </div>
 
             <div className="flex justify-center space-x-6 pt-8">
